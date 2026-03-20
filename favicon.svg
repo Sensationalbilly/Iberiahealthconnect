@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Yellow bag body -->
+  <rect x="6" y="22" width="44" height="36" rx="10" ry="10" fill="#f5b800"/>
+  <!-- Green bottom wave on bag -->
+  <path d="M6 46 Q28 38 50 46 L50 58 Q50 58 50 58 C50 61.3 47.3 64 44 64 H12 C8.7 64 6 61.3 6 58 Z" fill="#2d6a1f" transform="translate(0,-6)"/>
+  <!-- Bag handle -->
+  <path d="M18 22 Q18 10 28 10 Q38 10 38 22" fill="none" stroke="#2d6a1f" stroke-width="4" stroke-linecap="round"/>
+  <!-- Stethoscope tube -->
+  <path d="M20 30 Q14 30 14 38 Q14 46 22 46 Q30 46 30 38 L30 28" fill="none" stroke="#1a3d10" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Stethoscope earpiece right -->
+  <line x1="30" y1="28" x2="38" y2="22" stroke="#1a3d10" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Stethoscope earpiece dot -->
+  <circle cx="39" cy="21" r="3" fill="#1a3d10"/>
+  <!-- Stethoscope chest piece -->
+  <circle cx="22" cy="46" r="4" fill="#1a3d10"/>
+  <circle cx="22" cy="46" r="2" fill="#f5b800"/>
+</svg>

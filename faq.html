@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>FAQ – Iberia Health Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Services <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="services/healthcare-orientation.html">Tier 1: Healthcare Orientation</a>
+            <a href="services/guided-setup.html">Tier 2: Guided Setup</a>
+            <a href="services/ongoing-care-partner.html">Tier 3: Ongoing Care Partner</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Compare <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="portugal-vs-spain.html">Portugal vs Spain Comparison</a>
+            <a href="portugal-guide.html">Portugal Healthcare Guide</a>
+            <a href="spain-guide.html">Spain Healthcare Guide</a>
+          </div>
+        </div>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="btn btn-accent nav-cta">Book Consult</a>
+      </nav>      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="mobile-menu-logo" />
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-cta">
+        <a href="contact.html" class="btn btn-accent btn-block">Book a Free Consult</a>
+      </div>
+      <a href="index.html" class="mobile-link">Home</a>
+      <div class="mobile-section-label">Services</div>
+      <a href="services/healthcare-orientation.html" class="mobile-link">Tier 1: Healthcare Orientation</a>
+      <a href="services/guided-setup.html" class="mobile-link">Tier 2: Guided Setup</a>
+      <a href="services/ongoing-care-partner.html" class="mobile-link">Tier 3: Ongoing Care Partner</a>
+      <div class="mobile-section-label">Compare</div>
+      <a href="portugal-vs-spain.html" class="mobile-link">Portugal vs Spain</a>
+      <a href="portugal-guide.html" class="mobile-link">Portugal Guide</a>
+      <a href="spain-guide.html" class="mobile-link">Spain Guide</a>
+      <div class="mobile-section-label">More</div>
+      <a href="faq.html" class="mobile-link">FAQ</a>
+      <a href="resources.html" class="mobile-link">Resources</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / FAQ</div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know about healthcare planning for Portugal or Spain.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">How does the free 15-minute consultation work? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">We schedule a short call to discuss your situation, timeline, and what you need most. There's no obligation — it's simply a chance to see if we're a good fit and clarify your options before committing to any tier.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do you provide medical advice? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. We provide healthcare navigation and planning support — helping you understand systems, sequences, and administrative steps. We do not diagnose, prescribe, or provide clinical guidance. We help you understand how to access care, not what care to receive.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do I have to disclose personal medical information? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Share only what you're comfortable sharing about prescriptions or care continuity. We can work effectively with general information about your situation without requiring detailed medical history.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do you work with LGBTQ+ clients? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. We work with LGBTQ+ individuals and couples, including trans adults and parents of transgender youth. We provide extra attention to continuity of care, documentation needs, and navigating systems that may require additional planning.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How early should I start planning healthcare before moving? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Ideally 3–6 months before your move. Administrative timing affects continuity, and some steps — like prescription buffers and documentation gathering — take time. The earlier you start, the smoother the transition.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Do Americans need private health insurance in Portugal or Spain? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">It depends on your visa type and situation. Both countries have public healthcare systems that residents can access, but private insurance is often used during the early transition period and is sometimes required for visa applications. We help you understand what applies to your specific situation.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can you help plan continuity of gender-affirming care? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. This is an area where planning ahead matters significantly. We help identify pathways, documentation requirements, and prescription continuity strategies specific to gender-affirming care in Portugal and Spain.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can we meet by audio only? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Prefer not to be on video? Audio-only is always available. Just let us know when you book.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What's the difference between public and private healthcare in Portugal and Spain? <span class="faq-icon">+</span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Both countries have national public systems (SNS in Portugal, SNS in Spain) that provide broad coverage, but access for new residents requires registration and can take time. Private care is widely available, often faster, and commonly used alongside the public system — especially during the early transition. The adjustment is less about quality and more about expectations and process.</div></div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <p style="color:var(--muted-foreground); margin-bottom:1.5rem;">Still have questions?</p>
+        <a href="contact.html" class="btn btn-accent btn-lg">Book a free consultation to clarify</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="footer-logo" />
+        <p>Healthcare navigation and planning support for Americans relocating to Portugal or Spain.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col"><h5>Services</h5><a href="services/healthcare-orientation.html">Healthcare Orientation</a><a href="services/guided-setup.html">Guided Setup</a><a href="services/ongoing-care-partner.html">Ongoing Care Partner</a></div>
+        <div class="footer-col"><h5>Resources</h5><a href="portugal-guide.html">Portugal Guide</a><a href="spain-guide.html">Spain Guide</a><a href="faq.html">FAQ</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Iberia Health Connect. All rights reserved.</p></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

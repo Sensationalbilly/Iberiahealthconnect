@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <title>Services – Iberia Health Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo"><img src="../IBERIA HEALTH.png" alt="Iberia Health Connect" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn active">Services <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="healthcare-orientation.html">Tier 1: Healthcare Orientation</a>
+            <a href="guided-setup.html">Tier 2: Guided Setup</a>
+            <a href="ongoing-care-partner.html">Tier 3: Ongoing Care Partner</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Compare <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="../portugal-vs-spain.html">Portugal vs Spain Comparison</a>
+            <a href="../portugal-guide.html">Portugal Healthcare Guide</a>
+            <a href="../spain-guide.html">Spain Healthcare Guide</a>
+          </div>
+        </div>
+        <a href="../faq.html" class="nav-link">FAQ</a>
+        <a href="../resources.html" class="nav-link">Resources</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="btn btn-accent nav-cta">Book Consult</a>
+      </nav>      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <img src="../IBERIA HEALTH.png" alt="Iberia Health Connect" class="mobile-menu-logo" />
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-cta">
+        <a href="../contact.html" class="btn btn-accent btn-block">Book a Free Consult</a>
+      </div>
+      <a href="../index.html" class="mobile-link">Home</a>
+      <div class="mobile-section-label">Services</div>
+      <a href="healthcare-orientation.html" class="mobile-link">Tier 1: Healthcare Orientation</a>
+      <a href="guided-setup.html" class="mobile-link">Tier 2: Guided Setup</a>
+      <a href="ongoing-care-partner.html" class="mobile-link">Tier 3: Ongoing Care Partner</a>
+      <div class="mobile-section-label">Compare</div>
+      <a href="../portugal-vs-spain.html" class="mobile-link">Portugal vs Spain</a>
+      <a href="../portugal-guide.html" class="mobile-link">Portugal Guide</a>
+      <a href="../spain-guide.html" class="mobile-link">Spain Guide</a>
+      <div class="mobile-section-label">More</div>
+      <a href="../faq.html" class="mobile-link">FAQ</a>
+      <a href="../resources.html" class="mobile-link">Resources</a>
+      <a href="../about.html" class="mobile-link">About</a>
+      <a href="../contact.html" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / Services</div>
+      <h1>Healthcare Planning Services</h1>
+      <p>From a single orientation session to ongoing partnership — choose the level of support that fits your comfort level and complexity.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Choose a Tier</div>
+        <h2 class="serif">Choose the level of guidance that matches your needs and timeline.</h2>
+        <p class="text-muted">Select the level of support that fits your comfort level and complexity.</p>
+      </div>
+
+      <div class="tiers-grid">
+        <div class="tier-card reveal-up" style="animation-delay:.05s">
+          <div class="tier-num">01</div>
+          <div class="tier-label">Tier 1</div>
+          <h3>Healthcare Orientation</h3>
+          <p>A single 90-minute working session to review your situation, explain the systems, and map out your next steps.</p>
+          <ul class="tier-features">
+            <li>System overview for your destination</li>
+            <li>Personalized next steps action plan</li>
+            <li>Prescription continuity review</li>
+            <li>90-minute video or audio session</li>
+          </ul>
+          <a href="healthcare-orientation.html" class="btn btn-outline mt-auto">View Details</a>
+        </div>
+
+        <div class="tier-card tier-featured reveal-up" style="animation-delay:.15s">
+          <div class="most-popular">Most Popular</div>
+          <div class="tier-num accent">02</div>
+          <div class="tier-label">Tier 2</div>
+          <h3>Guided Setup</h3>
+          <p>We turn your plan into a step-by-step sequence, track tasks, and provide ongoing email support to get you established.</p>
+          <ul class="tier-features">
+            <li>Everything in Tier 1</li>
+            <li>Step-by-step administrative sequencing</li>
+            <li>Task tracking & checklists</li>
+            <li>Ongoing email support between sessions</li>
+            <li>Documents and guidance materials</li>
+          </ul>
+          <a href="guided-setup.html" class="btn btn-accent mt-auto">View Details</a>
+        </div>
+
+        <div class="tier-card reveal-up" style="animation-delay:.25s">
+          <div class="tier-num">03</div>
+          <div class="tier-label">Tier 3</div>
+          <h3>Ongoing Care Partner</h3>
+          <p>Quarterly check-ins and ongoing admin/navigation support as your needs change after you arrive.</p>
+          <ul class="tier-features">
+            <li>Everything in Tier 1 & 2</li>
+            <li>Quarterly check-ins (video or audio)</li>
+            <li>Ongoing email support</li>
+            <li>Plan updates as needs evolve</li>
+            <li>Long-term navigation support</li>
+          </ul>
+          <a href="ongoing-care-partner.html" class="btn btn-outline mt-auto">View Details</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <p style="color:var(--muted-foreground); margin-bottom:1.25rem;">Not sure if this is the right tier?</p>
+        <a href="../contact.html" class="btn btn-accent btn-lg">Book a free 15-minute consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="../IBERIA HEALTH.png" alt="Iberia Health Connect" class="footer-logo" /><p>Healthcare navigation and planning support for Americans relocating to Portugal or Spain.</p></div>
+      <div class="footer-links">
+        <div class="footer-col"><h5>Services</h5><a href="healthcare-orientation.html">Healthcare Orientation</a><a href="guided-setup.html">Guided Setup</a><a href="ongoing-care-partner.html">Ongoing Care Partner</a></div>
+        <div class="footer-col"><h5>Resources</h5><a href="../portugal-guide.html">Portugal Guide</a><a href="../spain-guide.html">Spain Guide</a><a href="../faq.html">FAQ</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="../about.html">About</a><a href="../contact.html">Contact</a><a href="../privacy.html">Privacy Policy</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Iberia Health Connect. All rights reserved.</p></div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

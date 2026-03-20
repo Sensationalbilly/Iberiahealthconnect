@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Iberia Health Connect – Healthcare for Americans in Portugal & Spain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="logo-img" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Services <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="services/healthcare-orientation.html">Tier 1: Healthcare Orientation</a>
+            <a href="services/guided-setup.html">Tier 2: Guided Setup</a>
+            <a href="services/ongoing-care-partner.html">Tier 3: Ongoing Care Partner</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Compare <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="portugal-vs-spain.html">Portugal vs Spain Comparison</a>
+            <a href="portugal-guide.html">Portugal Healthcare Guide</a>
+            <a href="spain-guide.html">Spain Healthcare Guide</a>
+          </div>
+        </div>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="btn btn-accent nav-cta">Book Consult</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="mobile-menu-logo" />
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-cta">
+        <a href="contact.html" class="btn btn-accent btn-block">Book a Free Consult</a>
+      </div>
+      <a href="index.html" class="mobile-link">Home</a>
+      <div class="mobile-section-label">Services</div>
+      <a href="services/healthcare-orientation.html" class="mobile-link">Tier 1: Healthcare Orientation</a>
+      <a href="services/guided-setup.html" class="mobile-link">Tier 2: Guided Setup</a>
+      <a href="services/ongoing-care-partner.html" class="mobile-link">Tier 3: Ongoing Care Partner</a>
+      <div class="mobile-section-label">Compare</div>
+      <a href="portugal-vs-spain.html" class="mobile-link">Portugal vs Spain</a>
+      <a href="portugal-guide.html" class="mobile-link">Portugal Guide</a>
+      <a href="spain-guide.html" class="mobile-link">Spain Guide</a>
+      <div class="mobile-section-label">More</div>
+      <a href="faq.html" class="mobile-link">FAQ</a>
+      <a href="resources.html" class="mobile-link">Resources</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="Background.png" alt="" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-split">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-text-col">
+        <div class="hero-badge reveal-up" style="animation-delay:0s">
+          <span class="badge-dot"></span> Healthcare Navigation for Americans
+        </div>
+        <h1 class="hero-title reveal-up" style="animation-delay:.1s">
+          Healthcare,<br><em>simplified</em> for<br>Americans in<br>Portugal &amp; Spain.
+        </h1>
+        <p class="hero-sub reveal-up" style="animation-delay:.25s">
+          How does public healthcare work? Will your prescriptions transfer? We guide you through every step — calmly and clearly.
+        </p>
+        <div class="hero-actions reveal-up" style="animation-delay:.4s">
+          <a href="contact.html" class="btn btn-accent btn-lg pulse-glow">Book a free 15-min consultation</a>
+          <a href="#services" class="btn btn-ghost-white">Explore Services ↓</a>
+        </div>
+        <div class="hero-stats reveal-up" style="animation-delay:.55s">
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Service Tiers</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Countries</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">15<small>min</small></span><span class="stat-label">Free Call</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Mockup -->
+      <div class="hero-mockup-col reveal-left" style="animation-delay:.3s">
+        <div class="hero-mockup-wrap">
+
+          <!-- Doctor card -->
+          <div class="hero-doctor-card">
+            <img src="doctor.png" alt="Healthcare professional" class="hero-doctor-img" />
+          </div>
+
+          <!-- Float: expert badge top-right -->
+          <div class="hero-float-card hero-float-trust">
+            <div class="hero-float-icon green">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="hero-float-title">Expert-backed</div>
+              <div class="hero-float-sub">U.S. · Portugal · Spain</div>
+            </div>
+          </div>
+
+          <!-- Float: checklist card bottom-left -->
+          <div class="hero-float-card hero-float-checklist">
+            <div class="hero-float-title" style="margin-bottom:0.6rem;">Your action plan</div>
+            <div class="hero-float-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              Register with SNS / SCS
+            </div>
+            <div class="hero-float-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              Prescription continuity plan
+            </div>
+            <div class="hero-float-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              Private vs public decision
+            </div>
+          </div>
+
+          <!-- Float: free consult pill bottom-right -->
+          <div class="hero-float-pill">
+            <span class="badge-dot" style="width:7px;height:7px;"></span>
+            Free 15-min call available
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ QUICK LINKS STRIP ═══ -->
+  <section class="quick-links">
+    <div class="container">
+      <div class="quick-grid">
+        <a href="portugal-vs-spain.html" class="quick-card reveal-up" style="animation-delay:.05s">
+          <div class="quick-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M14 3h7v7"/><path d="M10 14 21 3"/></svg>
+          </div>
+          <div>
+            <h3>Compare Countries <span class="arrow">→</span></h3>
+            <p>Which system fits your needs?</p>
+          </div>
+        </a>
+        <a href="portugal-guide.html" class="quick-card reveal-up" style="animation-delay:.15s">
+          <div class="quick-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <div>
+            <h3>Portugal Guide <span class="arrow">→</span></h3>
+            <p>Understanding the SNS and private care</p>
+          </div>
+        </a>
+        <a href="spain-guide.html" class="quick-card reveal-up" style="animation-delay:.25s">
+          <div class="quick-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3>Spain Guide <span class="arrow">→</span></h3>
+            <p>Navigating regional healthcare structures</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ OUR APPROACH ═══ -->
+  <section class="section" id="about-section">
+    <div class="container two-col">
+      <div class="col reveal-right">
+        <div class="section-eyebrow">Our Approach</div>
+        <h2 class="serif">You don't have to figure this out alone.</h2>
+        <p class="text-muted">We help you navigate the process and stay organized. You remain in control of your choices and communications.</p>
+        <ul class="check-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Understand public vs private systems
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Plan your first 30–90 days strategically
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Prepare for prescription continuity
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary);flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Avoid common administrative pitfalls
+          </li>
+        </ul>
+        <a href="contact.html" class="btn btn-accent mt-6">Get expert guidance →</a>
+      </div>
+      <div class="col reveal-left">
+        <div class="img-card">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80" alt="Doctor in white coat with stethoscope" class="rounded-img" />
+          <div class="expert-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Expert-backed
+          </div>
+          <div class="float-badge">
+            <div class="float-badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <p class="badge-title">Peace of mind</p>
+            <p class="badge-sub">Focus on enjoying your move, not navigating bureaucracy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERTISE BANNER ═══ -->
+  <section class="expertise-banner">
+    <div class="expertise-bg">
+      <img src="Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png" alt="Healthcare professionals" class="expertise-img" />
+      <div class="expertise-overlay"></div>
+    </div>
+    <div class="container expertise-content">
+      <div class="expertise-text reveal-up">
+        <div class="section-eyebrow light">Healthcare Expertise</div>
+        <h2 class="serif expertise-title">Backed by deep knowledge of both systems.</h2>
+        <p>We've navigated the U.S., Portuguese, and Spanish healthcare systems firsthand. That experience shapes every plan we build — so you don't have to learn the hard way.</p>
+        <div class="expertise-pills">
+          <span class="pill">SNS Portugal</span>
+          <span class="pill">SNS Spain</span>
+          <span class="pill">Prescription Continuity</span>
+          <span class="pill">Visa Health Requirements</span>
+          <span class="pill">LGBTQ+ Care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES TIERS ═══ -->
+  <section class="section bg-secondary" id="services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Services</div>
+        <h2 class="serif">Choose the level of support</h2>
+        <p class="text-muted">From a single orientation session to ongoing partnership, choose what fits your comfort level.</p>
+      </div>
+      <div class="tiers-grid">
+        <div class="tier-card reveal-up" style="animation-delay:.05s">
+          <div class="tier-num">01</div>
+          <div class="tier-label">Tier 1</div>
+          <h3>Healthcare Orientation</h3>
+          <p>A single 90-minute working session to review your situation, explain the systems, and map out your next steps.</p>
+          <ul class="tier-features">
+            <li>System overview for your destination</li>
+            <li>Personalized next steps action plan</li>
+            <li>Prescription continuity review</li>
+          </ul>
+          <a href="services/healthcare-orientation.html" class="btn btn-outline mt-auto">View Details</a>
+        </div>
+        <div class="tier-card tier-featured reveal-up" style="animation-delay:.15s">
+          <div class="most-popular">Most Popular</div>
+          <div class="tier-num accent">02</div>
+          <div class="tier-label">Tier 2</div>
+          <h3>Guided Setup</h3>
+          <p>We turn your plan into a step-by-step sequence, track tasks, and provide ongoing email support to get you established.</p>
+          <ul class="tier-features">
+            <li>Everything in Tier 1</li>
+            <li>Step-by-step administrative sequencing</li>
+            <li>Task tracking &amp; checklists</li>
+            <li>Ongoing email support</li>
+          </ul>
+          <a href="services/guided-setup.html" class="btn btn-accent mt-auto">View Details</a>
+        </div>
+        <div class="tier-card reveal-up" style="animation-delay:.25s">
+          <div class="tier-num">03</div>
+          <div class="tier-label">Tier 3</div>
+          <h3>Ongoing Care Partner</h3>
+          <p>Quarterly check-ins and ongoing admin/navigation support as your needs change after you arrive.</p>
+          <ul class="tier-features">
+            <li>Everything in Tier 1 &amp; 2</li>
+            <li>Quarterly check-ins</li>
+            <li>Long-term navigation support</li>
+          </ul>
+          <a href="services/ongoing-care-partner.html" class="btn btn-outline mt-auto">View Details</a>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="contact.html" class="btn btn-ghost">Not sure which tier? Book a free 15-min call →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW IT WORKS ═══ -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Process</div>
+        <h2 class="serif">How It Works</h2>
+        <p class="text-muted">Three simple steps from confused to confident.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step reveal-up" style="animation-delay:.05s">
+          <div class="step-num">1</div>
+          <div class="step-connector"></div>
+          <h4>Book a Free 15-Min Call</h4>
+          <p>We discuss your situation, timeline, and what you need most.</p>
+        </div>
+        <div class="step reveal-up" style="animation-delay:.15s">
+          <div class="step-num">2</div>
+          <div class="step-connector"></div>
+          <h4>Choose Your Tier</h4>
+          <p>Select the level of support that fits your comfort level and complexity.</p>
+        </div>
+        <div class="step reveal-up" style="animation-delay:.25s">
+          <div class="step-num">3</div>
+          <h4>Execute with Clarity</h4>
+          <p>Move forward with a structured plan, knowing exactly what to do and when.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHO WE HELP ═══ -->
+  <section class="section bg-secondary">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-eyebrow">Who We Help</div>
+        <h2 class="serif">Built for your situation</h2>
+        <p class="text-muted">Healthcare planning looks different depending on your needs. We work with a range of clients.</p>
+      </div>
+      <div class="who-grid">
+        <div class="who-card reveal-up" style="animation-delay:.05s">
+          <div class="who-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+          </div>
+          <h4>Retirees relocating full-time</h4>
+          <p>Broad provider access and understanding public enrollment timelines.</p>
+        </div>
+        <div class="who-card reveal-up" style="animation-delay:.1s">
+          <div class="who-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Families with children</h4>
+          <p>Establishing pediatric pathways and continuity of care documentation.</p>
+        </div>
+        <div class="who-card reveal-up" style="animation-delay:.15s">
+          <div class="who-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+          </div>
+          <h4>Managing ongoing prescriptions</h4>
+          <p>Confirming medication names, generic equivalents, and refill processes.</p>
+        </div>
+        <div class="who-card reveal-up" style="animation-delay:.2s">
+          <div class="who-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h4>LGBTQ+ individuals &amp; couples</h4>
+          <p>Extra attention to continuity of care and documentation needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BANNER ═══ -->
+  <section class="cta-banner">
+    <div class="cta-bg-pattern"></div>
+    <div class="container text-center">
+      <div class="reveal-up">
+        <div class="section-eyebrow light">Get Started</div>
+        <h2 class="serif cta-title">Let's Make Healthcare the Calm Part of Your Move</h2>
+        <p>Healthcare planning doesn't need to feel overwhelming. Book a call to get clarity.</p>
+        <a href="contact.html" class="btn btn-accent btn-lg pulse-glow">Book a free 15-minute consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Logo PNG (1).png" alt="Iberia Health Connect" class="footer-logo" />
+        <p>Healthcare navigation and planning support for Americans relocating to Portugal or Spain.</p>
+        <div class="footer-tagline">Calm. Structured. Empathetic.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="services/healthcare-orientation.html">Healthcare Orientation</a>
+          <a href="services/guided-setup.html">Guided Setup</a>
+          <a href="services/ongoing-care-partner.html">Ongoing Care Partner</a>
+        </div>
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <a href="portugal-guide.html">Portugal Guide</a>
+          <a href="spain-guide.html">Spain Guide</a>
+          <a href="portugal-vs-spain.html">Compare Countries</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Iberia Health Connect. All rights reserved. · Healthcare navigation support, not medical advice.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

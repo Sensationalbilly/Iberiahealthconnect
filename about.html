@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>About – Iberia Health Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="logo-img" /></a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Services <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="services/healthcare-orientation.html">Tier 1: Healthcare Orientation</a>
+            <a href="services/guided-setup.html">Tier 2: Guided Setup</a>
+            <a href="services/ongoing-care-partner.html">Tier 3: Ongoing Care Partner</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-btn">Compare <span class="chevron">▾</span></button>
+          <div class="dropdown-menu">
+            <a href="portugal-vs-spain.html">Portugal vs Spain Comparison</a>
+            <a href="portugal-guide.html">Portugal Healthcare Guide</a>
+            <a href="spain-guide.html">Spain Healthcare Guide</a>
+          </div>
+        </div>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="btn btn-accent nav-cta">Book Consult</a>
+      </nav>      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-menu-header">
+      <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="mobile-menu-logo" />
+      <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <div class="mobile-menu-cta">
+        <a href="contact.html" class="btn btn-accent btn-block">Book a Free Consult</a>
+      </div>
+      <a href="index.html" class="mobile-link">Home</a>
+      <div class="mobile-section-label">Services</div>
+      <a href="services/healthcare-orientation.html" class="mobile-link">Tier 1: Healthcare Orientation</a>
+      <a href="services/guided-setup.html" class="mobile-link">Tier 2: Guided Setup</a>
+      <a href="services/ongoing-care-partner.html" class="mobile-link">Tier 3: Ongoing Care Partner</a>
+      <div class="mobile-section-label">Compare</div>
+      <a href="portugal-vs-spain.html" class="mobile-link">Portugal vs Spain</a>
+      <a href="portugal-guide.html" class="mobile-link">Portugal Guide</a>
+      <a href="spain-guide.html" class="mobile-link">Spain Guide</a>
+      <div class="mobile-section-label">More</div>
+      <a href="faq.html" class="mobile-link">FAQ</a>
+      <a href="resources.html" class="mobile-link">Resources</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- About Hero — dark green gradient, split layout -->
+  <section class="about-hero">
+    <div class="about-hero-overlay"></div>
+
+    <div class="about-hero-split">
+
+      <!-- LEFT: Text -->
+      <div class="about-hero-text">
+        <div class="breadcrumb" style="color:rgba(255,255,255,0.45); margin-bottom:1.25rem;"><a href="index.html" style="color:rgba(255,255,255,0.6);">Home</a> / About</div>
+        <div class="hero-badge" style="margin-bottom:1.25rem; background:rgba(168,192,96,0.15); border-color:rgba(168,192,96,0.3);">
+          <span class="badge-dot" style="background:#a8c060; box-shadow:0 0 0 3px rgba(168,192,96,0.25);"></span>
+          Healthcare Navigation Experts
+        </div>
+        <h1 class="serif about-hero-title">
+          Built by Americans,<br><em>for</em> Americans<br>moving abroad.
+        </h1>
+        <p class="about-hero-sub">We've navigated the U.S., Portuguese, and Spanish healthcare systems firsthand — so you don't have to figure it out alone.</p>
+        <div class="about-pills-row" style="margin-bottom:2.5rem;">
+          <span class="about-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Calm
+          </span>
+          <span class="about-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Structured
+          </span>
+          <span class="about-pill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Empathetic
+          </span>
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-accent btn-lg">Book a free consultation</a>
+          <a href="#approach" class="btn btn-ghost-white">Our Approach ↓</a>
+        </div>
+        <!-- Stats bar -->
+        <div class="hero-stats" style="margin-top:2.5rem; background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.12);">
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Countries</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Service Tiers</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">15<small>min</small></span><span class="stat-label">Free Call</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Doctor image -->
+      <div class="about-hero-img-col">
+        <div class="about-hero-mockup-wrap">
+          <img src="doctor.png" alt="Healthcare professional" class="about-hero-doctor-img" />
+
+          <!-- Float: expert badge top-right -->
+          <div class="hero-float-card about-float-trust">
+            <div class="hero-float-icon green">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="hero-float-title">Expert-backed</div>
+              <div class="hero-float-sub">U.S. · Portugal · Spain</div>
+            </div>
+          </div>
+
+          <!-- Float: stat card bottom-left -->
+          <div class="hero-float-card about-float-stat">
+            <div>
+              <div style="font-size:1.6rem; font-family:var(--font-serif); font-weight:700; color:var(--primary); line-height:1;">3</div>
+              <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:var(--muted-foreground); margin-top:0.2rem;">Countries of expertise</div>
+            </div>
+          </div>
+
+          <!-- Float: pill bottom-right -->
+          <div class="about-float-pill">
+            <span style="width:7px;height:7px;border-radius:50%;background:#a8c060;flex-shrink:0;"></span>
+            Free 15-min call available
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-approach-grid">
+        <div>
+          <div class="section-eyebrow">Our Approach</div>
+          <h2 class="serif" style="font-size:2.25rem; margin-bottom:1.5rem;">Calm, Structured, Empathetic</h2>
+          <p style="color:var(--muted-foreground); margin-bottom:1.25rem;">Iberia Health Connect was created to bridge the gap between what Americans expect from healthcare and how healthcare actually works in Portugal and Spain — calmly and clearly.</p>
+          <p style="color:var(--muted-foreground); margin-bottom:1.25rem;">We believe families can benefit when someone explains the structure and processes step-by-step. Articles provide education, but planning requires personalization.</p>
+          <p style="color:var(--muted-foreground); margin-bottom:1.25rem;">We are not a medical practice. We are healthcare navigators — helping you understand systems, sequences, and administrative steps so you can make informed decisions and access care confidently.</p>
+        </div>
+        <div class="about-approach-mockup">
+          <div class="about-mockup-card">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=85"
+              alt="Professional healthcare navigator"
+              class="about-mockup-img"
+            />
+            <div class="about-mockup-overlay">
+              <div class="about-mockup-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                Peace of mind, guaranteed
+              </div>
+            </div>
+          </div>
+          <div class="about-mockup-accent-card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+            <div>
+              <div style="font-weight:700; font-size:0.9rem;">Prescription continuity</div>
+              <div style="font-size:0.78rem; color:var(--muted-foreground);">Reviewed &amp; planned for you</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="max-width:800px; margin:4rem auto 0;">
+        <h2 class="serif" style="font-size:2rem; margin-bottom:2rem; text-align:center;">About Working With Us</h2>
+        <div class="about-working-grid">
+          <div class="who-card">
+            <h4>Privacy & Inclusivity</h4>
+            <p>We work with all clients regardless of background. LGBTQ+ individuals, families, retirees — everyone deserves calm, clear guidance.</p>
+          </div>
+          <div class="who-card">
+            <h4>No Medical Advice</h4>
+            <p>We provide navigation and planning support. We help you understand how to access care, not what care to receive.</p>
+          </div>
+          <div class="who-card">
+            <h4>Flexible Appointments</h4>
+            <p>Video or audio-only sessions available. We work around your schedule and comfort level.</p>
+          </div>
+          <div class="who-card">
+            <h4>Built on Experience</h4>
+            <p>We've navigated the U.S., Portuguese, and Spanish healthcare systems firsthand. That experience shapes everything we do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container text-center">
+      <h2 class="serif cta-title">Ready to get started?</h2>
+      <p>Book a free 15-minute consultation to discuss your situation.</p>
+      <a href="contact.html" class="btn btn-accent btn-lg">Book a free consultation</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="footer-logo" /><p>Healthcare navigation and planning support for Americans relocating to Portugal or Spain.</p></div>
+      <div class="footer-links">
+        <div class="footer-col"><h5>Services</h5><a href="services/healthcare-orientation.html">Healthcare Orientation</a><a href="services/guided-setup.html">Guided Setup</a><a href="services/ongoing-care-partner.html">Ongoing Care Partner</a></div>
+        <div class="footer-col"><h5>Resources</h5><a href="portugal-guide.html">Portugal Guide</a><a href="spain-guide.html">Spain Guide</a><a href="faq.html">FAQ</a></div>
+        <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Iberia Health Connect. All rights reserved.</p></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
