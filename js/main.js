@@ -8,17 +8,22 @@ const backdrop = document.createElement('div');
 backdrop.className = 'mobile-backdrop';
 document.body.appendChild(backdrop);
 
+let _scrollY = 0;
 function openMenu() {
+  _scrollY = window.scrollY;
   hamburger.classList.add('open');
   mobileMenu.classList.add('open');
   backdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  // Lock body scroll without blocking the drawer itself
+  document.body.style.cssText = `overflow:hidden; position:fixed; width:100%; top:-${_scrollY}px;`;
 }
 function closeMenu() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
   backdrop.classList.remove('open');
-  document.body.style.overflow = '';
+  // Restore body scroll position
+  document.body.style.cssText = '';
+  window.scrollTo(0, _scrollY);
 }
 
 if (hamburger && mobileMenu) {
