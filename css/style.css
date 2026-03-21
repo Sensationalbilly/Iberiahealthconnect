@@ -1300,7 +1300,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 0;
   background: none;
   overflow: visible;
 }
@@ -1308,52 +1308,50 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 /* Subtle yellow glow — very soft */
 .ph-glow {
   position: absolute;
-  top: 6%;
-  left: 50%;
-  transform: translateX(-42%);
-  width: 44%;
+  top: 5%;
+  right: 28%;
+  transform: none;
+  width: 42%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: radial-gradient(circle,
-    rgba(255, 210, 0, 0.18) 0%,
-    rgba(255, 210, 0, 0.08) 45%,
+    rgba(255, 210, 0, 0.22) 0%,
+    rgba(255, 210, 0, 0.10) 45%,
     transparent 70%
   );
   z-index: 0;
   pointer-events: none;
 }
 
-/* Background group — pushed back, very subtle */
+/* Background group — clearly visible team, tight behind main doctor */
 .ph-img-group {
   position: absolute;
   bottom: 0;
-  right: 2%;
-  height: 82%;
+  right: 0;
+  height: 86%;
   width: auto;
-  max-width: 88%;
+  max-width: 100%;
   object-fit: contain;
-  object-position: bottom center;
+  object-position: bottom right;
   mix-blend-mode: screen;
-  opacity: 0.38;
-  filter: blur(2.5px) brightness(0.85) saturate(0.75);
+  opacity: 0.78;
+  filter: blur(0.5px) brightness(0.94) saturate(0.92);
   z-index: 1;
 }
 
-/* Main doctor — dominant, centered, pops forward */
+/* Main doctor — dominant, right side, overlapping group */
 .ph-main-wrap {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  align-self: flex-end;
-  margin-right: 4%;
-  margin-bottom: 0;
-  height: auto;
+  bottom: 0;
+  right: 8%;
   display: flex;
   align-items: flex-end;
 }
 .ph-img-main {
   display: block;
-  height: 72vh;
-  max-height: 540px;
+  height: 70vh;
+  max-height: 530px;
   width: auto;
   object-fit: contain;
   object-position: bottom center;
@@ -1377,7 +1375,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-wrap { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem 0; }
   .ph-img-main  { height: 56vw; max-height: 460px; }
   .ph-img-group { height: 48vw; }
-  .ph-main-wrap { margin-right: 10%; }
+  .ph-main-wrap { right: 4%; }
 }
 
 @media (max-width: 768px) {
@@ -1390,8 +1388,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-right { min-height: 64vw; max-height: 380px; }
   .ph-img-main  { height: 60vw; max-height: 340px; }
   .ph-img-group { height: 52vw; max-height: 300px; }
-  .ph-main-wrap { margin-right: 8%; }
-  .ph-glow { width: 55%; top: 4%; }
+  .ph-main-wrap { right: 2%; }
+  .ph-glow { width: 55%; top: 4%; right: 20%; }
   .ph-green-band { height: 24px; }
 }
 
@@ -1399,8 +1397,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-heading { font-size: clamp(1.9rem, 8vw, 2.4rem); }
   .ph-right { min-height: 72vw; max-height: 300px; }
   .ph-img-main  { height: 65vw; max-height: 280px; }
-  .ph-main-wrap { margin-right: 5%; }
-  .ph-glow { width: 62%; }
+  .ph-main-wrap { right: 0; }
+  .ph-glow { width: 62%; right: 15%; }
 }
 
 /* ===== SERVICES ABOUT BLURB ===== */
