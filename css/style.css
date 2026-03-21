@@ -1300,68 +1300,72 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: 0;
   background: none;
   overflow: visible;
 }
 
-/* Subtle yellow glow — very soft */
+/* Glow — sits behind doctor's head, right-anchored */
 .ph-glow {
   position: absolute;
-  top: 5%;
-  right: 28%;
-  transform: none;
-  width: 42%;
+  top: 8%;
+  right: 18%;
+  width: 40%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: radial-gradient(circle,
-    rgba(255, 210, 0, 0.22) 0%,
-    rgba(255, 210, 0, 0.10) 45%,
-    transparent 70%
+    rgba(255, 215, 0, 0.28) 0%,
+    rgba(255, 215, 0, 0.10) 50%,
+    transparent 72%
   );
   z-index: 0;
   pointer-events: none;
 }
 
-/* Background group — clearly visible team, tight behind main doctor */
+/* Shared stage — relative container, right-aligned, fills column height */
+.ph-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* Background team — full group image, clearly visible, behind main doctor */
 .ph-img-group {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 86%;
+  height: 80%;
   width: auto;
-  max-width: 100%;
   object-fit: contain;
   object-position: bottom right;
   mix-blend-mode: screen;
-  opacity: 0.78;
-  filter: blur(0.5px) brightness(0.94) saturate(0.92);
+  /* clearly visible — not ghosted */
+  opacity: 0.82;
+  filter: brightness(0.96) saturate(0.95) blur(0px);
   z-index: 1;
 }
 
-/* Main doctor — dominant, right side, overlapping group */
-.ph-main-wrap {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  right: 8%;
-  display: flex;
-  align-items: flex-end;
-}
+/* Main doctor — anchored bottom-right, taller, dominant */
 .ph-img-main {
-  display: block;
-  height: 70vh;
-  max-height: 530px;
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+  height: 95%;
   width: auto;
   object-fit: contain;
   object-position: bottom center;
   mix-blend-mode: screen;
-  filter: drop-shadow(0px 12px 40px rgba(0,0,0,0.25)) brightness(1.06) contrast(1.1) saturate(1.08);
-  transform: scale(1.05);
+  filter: drop-shadow(0px 10px 36px rgba(0,0,0,0.22))
+          brightness(1.06) contrast(1.08) saturate(1.06);
+  transform: scale(1.04);
   transform-origin: bottom center;
+  z-index: 2;
 }
 
-/* Bottom green band — clean, not dominant */
+/* Bottom green band */
 .ph-green-band {
   height: 22px;
   background: #1a6b2a;
@@ -1373,9 +1377,9 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .ph-wrap { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem 0; }
-  .ph-img-main  { height: 56vw; max-height: 460px; }
-  .ph-img-group { height: 48vw; }
-  .ph-main-wrap { right: 4%; }
+  .ph-stage { min-height: 380px; }
+  .ph-img-main  { height: 90%; }
+  .ph-img-group { height: 74%; }
 }
 
 @media (max-width: 768px) {
@@ -1385,20 +1389,20 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-heading { font-size: clamp(2.1rem, 8.5vw, 2.8rem); }
   .ph-hours-card { max-width: 100%; }
   .ph-cta { width: 100%; justify-content: center; }
-  .ph-right { min-height: 64vw; max-height: 380px; }
-  .ph-img-main  { height: 60vw; max-height: 340px; }
-  .ph-img-group { height: 52vw; max-height: 300px; }
-  .ph-main-wrap { right: 2%; }
-  .ph-glow { width: 55%; top: 4%; right: 20%; }
-  .ph-green-band { height: 24px; }
+  .ph-right { min-height: 64vw; }
+  .ph-stage { min-height: 64vw; max-height: 360px; }
+  .ph-img-main  { height: 95%; }
+  .ph-img-group { height: 76%; }
+  .ph-glow { width: 50%; top: 5%; right: 15%; }
+  .ph-green-band { height: 18px; }
 }
 
 @media (max-width: 480px) {
   .ph-heading { font-size: clamp(1.9rem, 8vw, 2.4rem); }
-  .ph-right { min-height: 72vw; max-height: 300px; }
-  .ph-img-main  { height: 65vw; max-height: 280px; }
-  .ph-main-wrap { right: 0; }
-  .ph-glow { width: 62%; right: 15%; }
+  .ph-stage { min-height: 72vw; max-height: 300px; }
+  .ph-img-main  { height: 95%; right: 0; }
+  .ph-img-group { height: 74%; }
+  .ph-glow { width: 58%; right: 10%; }
 }
 
 /* ===== SERVICES ABOUT BLURB ===== */

@@ -120,24 +120,26 @@
       <!-- ── RIGHT COLUMN ── -->
       <div class="ph-right">
 
-        <!-- Yellow glow circle — behind everything -->
+        <!-- Yellow glow behind doctor's head -->
         <div class="ph-glow" aria-hidden="true"></div>
 
-        <!-- Background doctor group — z-index 1 -->
-        <img
-          src="Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png"
-          alt=""
-          class="ph-img-group"
-          aria-hidden="true"
-        />
+        <!-- Shared doctor stage — relative container for layering -->
+        <div class="ph-stage">
 
-        <!-- Foreground main doctor — z-index 2, larger, centered -->
-        <div class="ph-main-wrap">
+          <!-- Background team — visible, tight, z-index 1 -->
+          <img
+            src="Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png"
+            alt="Supporting medical team"
+            class="ph-img-group"
+          />
+
+          <!-- Main doctor — foreground, dominant, z-index 2 -->
           <img
             src="doctor.png"
             alt="Lead healthcare professional"
             class="ph-img-main"
           />
+
         </div>
 
       </div>
