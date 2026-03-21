@@ -1303,17 +1303,33 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   z-index: 0;
 }
 
-/* Doctors image — screen blend removes black bg */
-.hv2-doctor-img {
-  position: relative;
-  z-index: 1;
-  height: 68vh;
-  max-height: 520px;
+/* Group doctors — behind main doctor, screen-blended, shifted right */
+.hv2-group-img {
+  position: absolute;
+  bottom: 0;
+  right: -4%;
+  height: 62vh;
+  max-height: 480px;
   width: auto;
-  max-width: 100%;
   object-fit: contain;
   object-position: bottom center;
   mix-blend-mode: screen;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+/* Main doctor — front and center, taller */
+.hv2-doctor-img {
+  position: relative;
+  z-index: 2;
+  height: 72vh;
+  max-height: 540px;
+  width: auto;
+  max-width: 60%;
+  object-fit: contain;
+  object-position: bottom center;
+  mix-blend-mode: screen;
+  margin-right: 8%;
 }
 
 /* ── Bottom solid dark green bar ── */
@@ -1332,7 +1348,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
     padding-top: 3rem;
     padding-bottom: 2rem;
   }
-  .hv2-doctor-img { height: 55vw; max-height: 440px; }
+  .hv2-doctor-img { height: 55vw; max-height: 440px; max-width: 55%; }
+  .hv2-group-img { height: 48vw; max-height: 380px; }
 }
 
 @media (max-width: 768px) {
@@ -1348,7 +1365,8 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .hv2-hours { max-width: 100%; }
   .hv2-btn-primary { width: 100%; justify-content: center; }
   .hv2-img-col { min-height: 64vw; max-height: 360px; }
-  .hv2-doctor-img { height: 100%; max-height: 360px; }
+  .hv2-doctor-img { height: 60vw; max-height: 320px; max-width: 55%; margin-right: 5%; }
+  .hv2-group-img { height: 55vw; max-height: 280px; right: -2%; }
   .hv2-glow-ring { width: 65%; top: 2%; }
   .hv2-bar { height: 36px; }
 }
@@ -1356,6 +1374,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 @media (max-width: 480px) {
   .hv2-title { font-size: clamp(2rem, 8.5vw, 2.6rem); }
   .hv2-img-col { min-height: 72vw; max-height: 300px; }
+  .hv2-doctor-img { max-width: 60%; }
   .hv2-glow-ring { width: 72%; }
 }
 
