@@ -1289,13 +1289,13 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 /* Warm circular glow behind doctor — the yellow/cream circle */
 .hv2-glow-ring {
   position: absolute;
-  top: 8%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 62%;
+  width: 75%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(240,210,130,0.75) 0%, rgba(230,195,100,0.45) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(240,210,130,0.70) 0%, rgba(230,195,100,0.40) 45%, transparent 70%);
   z-index: 0;
 }
 
