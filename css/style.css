@@ -1298,6 +1298,11 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background: radial-gradient(ellipse 90% 85% at 55% 45%,
+    rgba(160, 200, 170, 0.45) 0%,
+    rgba(140, 185, 155, 0.20) 55%,
+    transparent 75%
+  );
 }
 
 /* Yellow/cream circular glow — behind everything */
@@ -1334,20 +1339,28 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   z-index: 1;
 }
 
-/* Foreground main doctor — larger, centered, sharp */
-.ph-img-main {
+/* Foreground main doctor — front and center, natural look */
+.ph-main-wrap {
   position: relative;
   z-index: 2;
+  align-self: flex-end;
+  margin-right: 12%;
   height: 96%;
   max-height: 560px;
-  width: auto;
   max-width: 52%;
+  display: flex;
+  align-items: flex-end;
+}
+.ph-img-main {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
   object-fit: contain;
   object-position: bottom center;
+  /* screen removes the black background — doctor appears natural */
   mix-blend-mode: screen;
-  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.18));
-  margin-right: 12%;
-  align-self: flex-end;
+  filter: brightness(1.05) contrast(1.08) saturate(1.1);
 }
 
 /* ── Bottom green band ── */
@@ -1367,7 +1380,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
     grid-template-columns: 1fr 1fr;
     padding: 3rem 1.5rem 4rem;
   }
-  .ph-img-main  { height: 80%; max-width: 55%; margin-right: 8%; }
+  .ph-main-wrap { max-width: 55%; margin-right: 8%; }
   .ph-img-group { height: 72%; }
 }
 
@@ -1386,7 +1399,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
     min-height: 62vw;
     max-height: 380px;
   }
-  .ph-img-main  { height: 95%; max-width: 50%; margin-right: 6%; }
+  .ph-main-wrap { max-width: 50%; margin-right: 6%; }
   .ph-img-group { height: 82%; right: 0; }
   .ph-glow { width: 60%; }
   .ph-green-band { height: 36px; }
@@ -1395,7 +1408,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 @media (max-width: 480px) {
   .ph-heading { font-size: clamp(2rem, 8.5vw, 2.6rem); }
   .ph-right { min-height: 72vw; max-height: 320px; }
-  .ph-img-main  { max-width: 55%; margin-right: 4%; }
+  .ph-main-wrap { max-width: 55%; margin-right: 4%; }
   .ph-glow { width: 68%; }
 }
 
