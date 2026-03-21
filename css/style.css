@@ -1387,6 +1387,62 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-glow { width: 62%; }
 }
 
+/* ===== SERVICES ABOUT BLURB ===== */
+.services-about-blurb {
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  padding: 2rem 2.5rem;
+  background: linear-gradient(135deg, rgba(92,107,58,0.05) 0%, rgba(232,160,32,0.04) 100%);
+  border: 1px solid rgba(92,107,58,0.12);
+  border-radius: 1.25rem;
+}
+.services-about-text {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #3a3a3a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.blurb-highlight {
+  font-weight: 700;
+  color: var(--primary);
+  font-style: normal;
+}
+.services-about-text em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Upgrade section-header typography */
+.section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+.section-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
 /* ===== TERMS PAGE ===== */
 .terms-content { max-width: 800px; margin: 0 auto; }
 .terms-content h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
