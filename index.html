@@ -7,7 +7,7 @@
   <title>Iberia Health Connect – Healthcare for Americans in Portugal & Spain</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Performance: preload critical assets -->
   <link rel="preload" as="image" href="images/Background.webp" type="image/webp">
   <link rel="preload" as="image" href="images/doctor.webp" type="image/webp">
@@ -80,78 +80,48 @@
   </div>
 
   <!-- ═══ HERO ═══ -->
-  <!-- ═══ HERO ═══ -->
-  <section class="ph-hero" id="hero">
+  <section class="hero" id="hero">
 
-    <!-- Full-section blurred background -->
-    <div class="ph-bg" aria-hidden="true">
-      <img src="images/Background.webp" alt="" class="ph-bg-img" />
-      <div class="ph-bg-wash"></div>
-    </div>
+    <!-- Layer 1: yellow halo circle -->
+    <div class="yellow-circle" aria-hidden="true"></div>
 
-    <!-- Two-column layout -->
-    <div class="ph-wrap">
+    <!-- Layer 2: group of doctors (right, behind solo) -->
+    <img
+      class="doc-group"
+      src="images/Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).webp"
+      alt="Medical team"
+    />
 
-      <!-- ── LEFT COLUMN ── -->
-      <div class="ph-left">
-        <h1 class="ph-heading">
-          Start your<br>wellness<br>Journey now
-        </h1>
+    <!-- Layer 3: solo doctor (centre-right, front) -->
+    <img
+      class="doc-solo"
+      src="images/doctor.webp"
+      alt="Lead physician"
+    />
 
-        <p class="ph-sub">
-          Your trusted guide to healthcare in <strong>Portugal</strong> and <strong>Spain</strong> —
-          helping Americans navigate public systems, prescriptions, and private care
-          with clarity and confidence.
-        </p>
-
-        <!-- Opening Hours card -->
-        <div class="ph-hours-card">
-          <p class="ph-hours-label">Opening Hours</p>
-          <div class="ph-hours-row">
-            <span>Monday – Friday</span>
-            <span>9:00AM – 12:00AM</span>
-          </div>
-          <div class="ph-hours-row">
-            <span>Saturday – Sunday</span>
-            <span>9:00AM – 7:00PM</span>
-          </div>
-        </div>
-
-        <a href="contact.html" class="ph-cta">Get Started</a>
+    <!-- Far left: headline + opening hours + CTA -->
+    <div class="hero-text">
+      <h1>Start your<br>wellness<br>Journey now</h1>
+      <div class="opening-hours">
+        <h3>Opening Hours</h3>
+        <table>
+          <tr>
+            <td>Monday – Friday</td>
+            <td>9:00AM – 12:00AM</td>
+          </tr>
+          <tr>
+            <td>Saturday – Sunday</td>
+            <td>9:00AM – 7:00PM</td>
+          </tr>
+        </table>
       </div>
-
-      <!-- ── RIGHT COLUMN ── -->
-      <div class="ph-right">
-
-        <!-- Yellow glow behind doctor's head -->
-        <div class="ph-glow" aria-hidden="true"></div>
-
-        <!-- Artwork container — overflow hidden, right-anchored -->
-        <div class="ph-stage">
-
-          <!-- Background team layer — behind, slightly dimmed -->
-          <img
-            src="images/Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).webp"
-            alt="Supporting medical team"
-            class="ph-img-group"
-          />
-
-          <!-- Foreground doctor — fully solid, dominant -->
-          <img
-            src="images/doctor.webp"
-            alt="Lead healthcare professional"
-            class="ph-img-main"
-          />
-
-        </div>
-
-      </div>
+      <a href="contact.html" class="btn-start">Get Started</a>
     </div>
-
-    <!-- Bottom green band -->
-    <div class="ph-green-band" aria-hidden="true"></div>
 
   </section>
+
+  <!-- Bottom green strip -->
+  <div class="green-strip" aria-hidden="true"></div>
 
   <!-- ═══ QUICK LINKS STRIP ═══ -->
   <section class="quick-links">
