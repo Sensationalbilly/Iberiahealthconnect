@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <!-- Performance: preload critical assets -->
+  <link rel="preload" as="image" href="images/Background.webp" type="image/webp">
+  <link rel="preload" as="image" href="images/doctor.webp" type="image/webp">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -16,7 +19,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="logo-img" />
+        <img src="images/IBERIA HEALTH.webp" alt="Iberia Health Connect" class="logo-img" />
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="index.html" class="nav-link active">Home</a>
@@ -50,7 +53,7 @@
   <!-- Mobile drawer -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
     <div class="mobile-menu-header">
-      <img src="IBERIA HEALTH.png" alt="Iberia Health Connect" class="mobile-menu-logo" />
+      <img src="images/IBERIA HEALTH.webp" alt="Iberia Health Connect" class="mobile-menu-logo" />
       <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </button>
@@ -82,7 +85,7 @@
 
     <!-- Full-section blurred background -->
     <div class="ph-bg" aria-hidden="true">
-      <img src="Background.png" alt="" class="ph-bg-img" />
+      <img src="images/Background.webp" alt="" class="ph-bg-img" />
       <div class="ph-bg-wash"></div>
     </div>
 
@@ -128,14 +131,14 @@
 
           <!-- Background team layer — behind, slightly dimmed -->
           <img
-            src="Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png"
+            src="images/Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).webp"
             alt="Supporting medical team"
             class="ph-img-group"
           />
 
           <!-- Foreground doctor — fully solid, dominant -->
           <img
-            src="doctor.png"
+            src="images/doctor.webp"
             alt="Lead healthcare professional"
             class="ph-img-main"
           />
@@ -214,7 +217,7 @@
       </div>
       <div class="col reveal-left">
         <div class="img-card">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80" alt="Doctor in white coat with stethoscope" class="rounded-img" />
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900&q=80" alt="Doctor in white coat with stethoscope" class="rounded-img" loading="lazy" />
           <div class="expert-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Expert-backed
@@ -234,7 +237,7 @@
   <!-- ═══ EXPERTISE BANNER ═══ -->
   <section class="expertise-banner">
     <div class="expertise-bg">
-      <img src="Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png" alt="Healthcare professionals" class="expertise-img" />
+      <img src="images/Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).webp" alt="Healthcare professionals" class="expertise-img" loading="lazy" />
       <div class="expertise-overlay"></div>
     </div>
     <div class="container expertise-content">
@@ -395,7 +398,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="Logo PNG (1).png" alt="Iberia Health Connect" class="footer-logo" />
+        <img src="images/Logo PNG (1).webp" alt="Iberia Health Connect" class="footer-logo" />
         <p>Healthcare navigation and planning support for Americans relocating to Portugal or Spain.</p>
         <div class="footer-tagline">Calm. Structured. Empathetic.</div>
       </div>
