@@ -1313,7 +1313,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .hero {
     height: auto;
     min-height: auto;
-    padding: 0 0 52vw;
+    padding: 0 0 62vw;
     background: linear-gradient(180deg, #f5fdf5 60%, #eaf6ea 100%);
   }
 
@@ -1336,41 +1336,55 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
     max-width: 100%;
   }
 
-  /* Hide yellow circle — clashes with text on mobile */
+  /* Yellow circle — repositioned behind solo doctor's head */
   .yellow-circle {
-    display: none;
+    display: block;
+    width: 38vw;
+    height: 38vw;
+    left: 2%;
+    top: auto;
+    bottom: 28vw;
+    transform: none;
+    z-index: 2;
   }
 
-  /* Solo doctor — left side, bottom-anchored */
+  /* Solo doctor — left side, bottom-anchored, bigger */
   .doc-solo {
-    left: 2%;
-    height: 55vw;
+    left: 0;
+    height: 68vw;
+    max-height: 340px;
+    width: auto;
+    bottom: 0;
+    z-index: 3;
+  }
+
+  /* Group — right side, bigger */
+  .doc-group {
+    right: 0;
+    height: 56vw;
     max-height: 280px;
     width: auto;
     bottom: 0;
-  }
-
-  /* Group — right side, slightly shorter */
-  .doc-group {
-    right: 0;
-    height: 44vw;
-    max-height: 230px;
-    width: auto;
-    bottom: 0;
+    z-index: 2;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding-bottom: 58vw;
+    padding-bottom: 66vw;
+  }
+  .yellow-circle {
+    width: 42vw;
+    height: 42vw;
+    bottom: 30vw;
   }
   .doc-solo {
-    height: 60vw;
-    max-height: 260px;
+    height: 72vw;
+    max-height: 300px;
   }
   .doc-group {
-    height: 48vw;
-    max-height: 210px;
+    height: 58vw;
+    max-height: 250px;
   }
 }
 
