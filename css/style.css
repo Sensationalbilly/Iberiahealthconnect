@@ -1378,19 +1378,21 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .ph-heading { font-size: clamp(2.1rem, 8.5vw, 2.8rem); }
   .ph-hours-card { max-width: 100%; }
   .ph-cta { width: 100%; justify-content: center; }
-  .ph-right { min-height: 64vw; }
-  .ph-stage { min-height: 64vw; max-height: 360px; }
-  .ph-img-main  { height: 96%; right: 16px; }
-  .ph-img-group { height: 78%; }
-  .ph-glow { width: 48%; top: 5%; right: 12%; }
+  .ph-right { min-height: 90vw; }
+  .ph-stage { min-height: 90vw; max-height: 480px; }
+  .ph-img-main  { height: 100%; right: 0; left: 50%; transform: translateX(-50%); }
+  .ph-img-group { height: 85%; right: 0; }
+  .ph-glow { width: 52%; top: 4%; right: 20%; }
   .ph-green-band { height: 18px; }
 }
 
 @media (max-width: 480px) {
   .ph-heading { font-size: clamp(1.9rem, 8vw, 2.4rem); }
-  .ph-stage { min-height: 72vw; max-height: 300px; }
-  .ph-img-main  { right: 8px; }
-  .ph-glow { width: 55%; right: 8%; }
+  .ph-right { min-height: 100vw; }
+  .ph-stage { min-height: 100vw; max-height: 420px; }
+  .ph-img-main  { height: 102%; right: 0; left: 50%; transform: translateX(-50%); }
+  .ph-img-group { height: 88%; }
+  .ph-glow { width: 58%; right: 18%; }
 }
 
 /* ===== SERVICES ABOUT BLURB ===== */
