@@ -1284,7 +1284,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   width: 240px;
   height: 240px;
   border-radius: 55%;
-  background: radial-gradient(circle at 42% 40%, #f5b400 0%, #c89200 55%, #e0a800 100%);
+  background: radial-gradient(circle at 42% 40%, #c9b371 0%, #c9b372 55%, #c9b372 55%);
   top: 16px;
   left: 46%;
   transform: translateX(-10%);
@@ -1364,7 +1364,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
     display: block;
     width: 38vw;
     height: 38vw;
-    left: 5%;
+    left: 4.6%;
     top: auto;
     bottom: 28vw;
     transform: none;
