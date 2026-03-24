@@ -90,14 +90,37 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 .chevron { font-size: 0.75rem; transition: transform 0.2s; }
 .nav-dropdown:hover .chevron { transform: rotate(180deg); }
 .dropdown-menu {
-  position: absolute; top: calc(100% + 0.5rem); left: 0;
+  position: absolute; top: 100%; left: 0;
   background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius); box-shadow: 0 8px 32px rgba(0,0,0,0.12);
   min-width: 260px; padding: 0.5rem; display: flex; flex-direction: column; gap: 0.25rem;
-  opacity: 0; pointer-events: none; transform: translateY(8px);
-  transition: all 0.2s; z-index: 50;
+  opacity: 0; pointer-events: none; transform: translateY(4px);
+  transition: opacity 0.2s, transform 0.2s;
+  transition-delay: 0s;
+  z-index: 50;
+  /* Invisible top padding bridges the gap so cursor doesn't leave the hover zone */
+  padding-top: 0.75rem;
+  margin-top: 0;
 }
-.nav-dropdown:hover .dropdown-menu { opacity: 1; pointer-events: auto; transform: translateY(0); }
+/* Small pseudo-element bridge fills any gap between button and menu */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+/* Delay closing so cursor has time to reach the menu */
+.nav-dropdown:not(:hover) .dropdown-menu {
+  transition-delay: 0.18s;
+}
 .dropdown-menu a {
   padding: 0.75rem 1rem; border-radius: 0.5rem; font-size: 0.875rem;
   font-weight: 500; color: var(--foreground); transition: background 0.15s;
