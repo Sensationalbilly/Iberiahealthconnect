@@ -15,7 +15,7 @@
   --border: #d4e8d4;
   --radius: 0.75rem;
   --font-sans: 'DM Sans', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: 'Nekst', 'DM Sans', sans-serif;
 }
 
 /* ===== RESET ===== */
@@ -1422,7 +1422,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   border-radius: 1.25rem;
 }
 .services-about-text {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Nekst', 'DM Sans', sans-serif;
   font-size: 1.08rem;
   line-height: 1.85;
   color: #1a1a1a;
@@ -1444,7 +1444,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 .section-header h2 {
   font-size: 2.25rem;
   margin-bottom: 1rem;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Nekst', 'DM Sans', sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
