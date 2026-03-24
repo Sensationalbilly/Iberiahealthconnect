@@ -84,17 +84,14 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 });
 
 // ── Contact form ─────────────────────────────────────────────────
+// Form submits natively to Formspree (no preventDefault)
+// Show a loading state on the button while submitting
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
+  contactForm.addEventListener('submit', () => {
     const btn = contactForm.querySelector('button[type=submit]');
-    btn.textContent = 'Request Sent ✓';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
-    btn.style.background = '#5c6b3a';
-    const msg = document.getElementById('formSuccess');
-    if (msg) msg.style.display = 'block';
-    contactForm.reset();
   });
 }
 
