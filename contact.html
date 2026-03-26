@@ -71,77 +71,60 @@
 
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Contact & Consult</div>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Book a Consultation</div>
       <h1>Book a Free 15-Minute Consultation</h1>
-      <p>Schedule a free 15-minute call to discuss your situation and clarify options.</p>
+      <p>Pick a date and time that works for you. We'll confirm your appointment within 24 hours.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container contact-grid">
-      <div class="contact-info">
-        <h2 class="serif">Ready for Personalized Guidance?</h2>
-        <p>Healthcare planning doesn't need to feel overwhelming. Book a call to get clarity on your specific situation.</p>
-        <p>We'll discuss your timeline, destination, and any specific concerns — prescriptions, family needs, LGBTQ+ considerations, or anything else on your mind.</p>
-        <div class="contact-detail">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Flexible appointments — video or audio-only
-        </div>
-        <div class="contact-detail">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Share only what you're comfortable sharing
-        </div>
-        <div class="contact-detail">
+    <div class="container">
+
+      <!-- Info strip -->
+      <div class="booking-info-strip">
+        <div class="booking-info-item">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          15 minutes, no obligation
+          <span>15 minutes</span>
         </div>
-        <div style="margin-top:2rem; padding:1.5rem; background:var(--secondary); border-radius:1rem; border:1px solid var(--border);">
-          <p style="font-weight:600; margin-bottom:0.5rem;">Can we meet by audio only?</p>
-          <p style="font-size:0.9rem; color:var(--muted-foreground); margin:0;">Prefer not to be on video? Audio-only is always available. Just let us know.</p>
+        <div class="booking-info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Mon, Thu &amp; Fri</span>
+        </div>
+        <div class="booking-info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>2:00 PM – 8:00 PM Portugal Time</span>
+        </div>
+        <div class="booking-info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.069A1 1 0 0 1 21 8.82v6.36a1 1 0 0 1-1.447.89L15 14"/><rect x="1" y="6" width="14" height="12" rx="2"/></svg>
+          <span>Zoom video or audio-only</span>
+        </div>
+        <div class="booking-info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Host-approved bookings</span>
         </div>
       </div>
 
-      <div class="form-card">
-        <h3 class="serif" style="margin-bottom:1.5rem; font-size:1.5rem;">Request Consultation</h3>
-        <div id="formSuccess" style="display:none; background:#f0f7ec; border:1px solid #5c6b3a; border-radius:0.75rem; padding:1rem 1.25rem; margin-bottom:1.5rem; color:#3d4a26;">
-          <strong>Request Received</strong><br>Thank you for reaching out. We will be in touch shortly to confirm your consultation time.
+      <!-- Calendly embed area -->
+      <div class="calendly-wrap">
+        <!-- ═══════════════════════════════════════════════════
+             REPLACE the placeholder below with the Calendly
+             inline embed script once the client shares their
+             Calendly link. Example:
+
+             <div class="calendly-inline-widget"
+               data-url="https://calendly.com/YOUR-LINK"
+               style="min-width:320px;height:700px;">
+             </div>
+             <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        ════════════════════════════════════════════════════ -->
+        <div class="calendly-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--primary); margin-bottom:1rem;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <h3>Booking Calendar Coming Soon</h3>
+          <p>Our scheduling system is being set up. In the meantime, reach out directly and we'll get you booked in.</p>
+          <a href="mailto:hello@iberiahealthconnect" class="btn btn-accent" style="margin-top:1rem;">Email us to book</a>
         </div>
-        <form id="contactForm" action="https://formspree.io/f/mdapnnre" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="first_name" placeholder="[First name]" required />
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="last_name" placeholder="[Last name]" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="[email]" required />
-          </div>
-          <div class="form-group">
-            <label for="destination">Portugal, Spain, or undecided</label>
-            <select id="destination" name="destination">
-              <option value="">Select destination...</option>
-              <option>Portugal</option>
-              <option>Spain</option>
-              <option>Undecided</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message & Details</label>
-            <textarea id="message" name="message" placeholder="Tell us a little about your timeline and plans..."></textarea>
-          </div>
-          <!-- Honeypot spam filter -->
-          <input type="text" name="_gotcha" style="display:none" />
-          <!-- Redirect after submission -->
-          <input type="hidden" name="_subject" value="New Consultation Request – Iberia Health Connect" />
-          <button type="submit" class="btn btn-accent" style="width:100%; padding:1rem;">Book a free 15-minute consultation</button>
-          <p style="font-size:0.8rem; color:var(--muted-foreground); margin-top:0.75rem; text-align:center;">Please provide your name and email.</p>
-        </form>
       </div>
+
     </div>
   </section>
 
