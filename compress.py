@@ -1,33 +1,35 @@
 from PIL import Image
-import os
+import os, glob
 
-files = [
-    ("Background.png",       (1920, 1080), 82),
-    ("doctor.png",           (900,  1100), 88),
-    ("Gemini_Generated_Image_xpxgpuxpxgpuxpxg copy (1).png", (900, 1100), 82),
-    ("Gemini_Generated_Image_xpxgpuxpxgpuxpxg_copy-removebg-preview.png", (900, 1100), 82),
-    ("IBERIA HEALTH.png",    (400,  200),  90),
-    ("Logo PNG (1).png",     (400,  200),  90),
-]
+# Target: max dimension 1400px wide, quality 78 for photos
+MAX_SIZE = (1400, 900)
+QUALITY  = 78
 
-os.makedirs("images", exist_ok=True)
+images_dir = "images"
+converted  = 0
 
-for filename, max_size, quality in files:
-    if not os.path.exists(filename):
-        print(f"SKIP (not found): {filename}")
-        continue
-    img = Image.open(filename)
-    img.thumbnail(max_size, Image.LANCZOS)
-    out_name = os.path.splitext(filename)[0] + ".webp"
-    out_path = os.path.join("images", out_name)
-    # preserve transparency if present
-    if img.mode in ("RGBA", "LA"):
-        img.save(out_path, "WEBP", quality=quality, method=6)
+for src in glob.glob(f"{images_dir}/*.jpg") + glob.glob(f"{images_dir}/*.jpeg") + glob.glob(f"{images_dir}/*.png"):
+    # skip already-webp and logos
+    base = os.path.splitext(src)[0]
+    out  = base + ".webp"
+    if os.path.exists(out):
+        orig_kb = os.path.getsize(src) / 1024
+        new_kb  = os.path.getsize(out) / 1024
+        # only skip if webp is already smaller
+        if new_kb < orig_kb:
+            print(f"SKIP (webp exists): {os.path.basename(src)}")
+            continue
+    img = Image.open(src)
+    img.thumbnail(MAX_SIZE, Image.LANCZOS)
+    if img.mode in ("RGBA", "LA", "P"):
+        img = img.convert("RGBA")
+        img.save(out, "WEBP", quality=QUALITY, method=6)
     else:
         img = img.convert("RGB")
-        img.save(out_path, "WEBP", quality=quality, method=6)
-    orig_kb  = os.path.getsize(filename) / 1024
-    new_kb   = os.path.getsize(out_path) / 1024
-    print(f"{filename}: {orig_kb:.0f}KB → {new_kb:.0f}KB  saved to images/{out_name}")
+        img.save(out, "WEBP", quality=QUALITY, method=6)
+    orig_kb = os.path.getsize(src) / 1024
+    new_kb  = os.path.getsize(out) / 1024
+    print(f"{os.path.basename(src)}: {orig_kb:.0f}KB → {new_kb:.0f}KB")
+    converted += 1
 
-print("\nDone.")
+print(f"\nDone. {converted} images converted.")

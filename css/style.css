@@ -1584,9 +1584,9 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 
 .olive-hero-heading {
   font-family: var(--font-sans);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
   font-weight: 900;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.5px;
   color: #ffffff;
   text-transform: uppercase;
@@ -1652,4 +1652,90 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 @media (max-width: 480px) {
   .olive-hero { min-height: 80vh; }
   .olive-hero-heading { font-size: clamp(1.8rem, 8.5vw, 2.4rem); }
+}
+
+/* ===== PHOTO MOSAIC ===== */
+.photo-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1rem;
+}
+.photo-tile {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.photo-tile--tall { grid-row: span 2; }
+.photo-tile img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+  display: block;
+}
+.photo-tile:hover img { transform: scale(1.06); }
+.photo-tile-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 0.6rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.photo-tile:hover .photo-tile-label { opacity: 1; transform: translateY(0); }
+
+/* ===== COMMUNITY GRID ===== */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.community-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.community-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+.community-card img {
+  width: 100%; height: 200px;
+  object-fit: cover; display: block;
+  transition: transform 0.5s ease;
+}
+.community-card:hover img { transform: scale(1.04); }
+.community-card-body { padding: 1rem 1.25rem 1.25rem; }
+.community-tag {
+  display: inline-block;
+  background: rgba(92,107,58,0.12);
+  color: var(--primary);
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0.2rem 0.65rem; border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+.community-card-body p {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .photo-mosaic { grid-template-columns: repeat(2, 1fr); }
+  .community-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .photo-mosaic { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+  .photo-tile--tall { grid-row: span 1; }
+  .community-grid { grid-template-columns: 1fr; }
 }
