@@ -1537,3 +1537,119 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   .booking-info-item { font-size: 0.8rem; padding: 0.45rem 0.9rem; }
   .calendly-placeholder { padding: 3rem 1.25rem; }
 }
+
+/* ===== OLIVE TREE HERO ===== */
+.olive-hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.olive-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.olive-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* Left-side gradient so text is always legible */
+.olive-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(10, 20, 8, 0.72) 0%,
+    rgba(10, 20, 8, 0.55) 40%,
+    rgba(10, 20, 8, 0.10) 75%,
+    transparent 100%
+  );
+}
+
+.olive-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 0 2.5rem 5rem;
+  margin-left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
+}
+
+.olive-hero-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  margin-bottom: 1.75rem;
+}
+
+/* Semi-transparent subtitle card */
+.olive-hero-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.olive-hero-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* CTA button */
+.olive-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1B6B1B;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 15px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.olive-hero-cta:hover {
+  background: #155515;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.30);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .olive-hero { min-height: 85vh; align-items: flex-end; }
+  .olive-hero-content {
+    padding: 0 1.25rem 3.5rem;
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .olive-hero-heading { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .olive-hero-card { max-width: 100%; }
+  .olive-hero-cta { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .olive-hero { min-height: 80vh; }
+  .olive-hero-heading { font-size: clamp(1.8rem, 8.5vw, 2.4rem); }
+}
