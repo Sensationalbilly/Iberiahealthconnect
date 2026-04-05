@@ -441,7 +441,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 .footer { background: var(--foreground); color: rgba(255,255,255,0.8); padding: 4rem 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1.5fr 2fr; gap: 4rem; padding-bottom: 3rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 280px; }
-.footer-logo { height: 56px; width: auto; object-fit: contain; opacity: 1; }
+.footer-logo { height: 56px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
 .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-col h5 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 0.25rem; }
@@ -1542,17 +1542,22 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 .olive-hero {
   position: relative;
   overflow: hidden;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
 }
 
 .olive-hero-bg {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 0;
-  line-height: 0;
 }
 
 .olive-hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
   display: block;
 }
 
@@ -1568,15 +1573,13 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   );
 }
 
-/* Desktop: content floats over the image */
+/* Content floats over the image */
 .olive-hero-content {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
   max-width: 560px;
-  padding: 0 2.5rem;
-  left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
+  padding: 2rem 2.5rem;
+  margin-left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
   line-height: 1.6;
 }
 
@@ -1633,36 +1636,42 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   box-shadow: 0 10px 28px rgba(0,0,0,0.30);
 }
 
-/* ── Mobile: image on top, content block below with dark bg ── */
+/* ── Mobile: content overlaid on image ── */
 @media (max-width: 768px) {
   .olive-hero {
-    display: flex;
-    flex-direction: column;
+    min-height: 100vw;
+    align-items: flex-end;
   }
-  .olive-hero-bg { flex-shrink: 0; }
   .olive-hero-overlay {
-    background: linear-gradient(to bottom, rgba(10,20,8,0.15) 0%, rgba(10,20,8,0.50) 100%);
+    background: linear-gradient(
+      to top,
+      rgba(5,15,5,0.92) 0%,
+      rgba(5,15,5,0.60) 45%,
+      rgba(5,15,5,0.10) 100%
+    );
   }
   .olive-hero-content {
-    position: relative;
-    top: auto;
-    transform: none;
-    left: auto;
     max-width: 100%;
-    padding: 1.75rem 1.25rem 2rem;
-    background: #0d1f0d;
-    line-height: 1.6;
+    padding: 1.5rem 1.25rem 2rem;
+    margin-left: 0;
   }
   .olive-hero-heading {
-    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
-    margin-bottom: 1.25rem;
+    font-size: clamp(1.6rem, 7.5vw, 2.1rem);
+    margin-bottom: 1rem;
   }
-  .olive-hero-card { max-width: 100%; margin-bottom: 1.5rem; }
-  .olive-hero-cta { width: 100%; justify-content: center; padding: 14px 24px; }
+  .olive-hero-card {
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+  }
+  .olive-hero-card p { color: rgba(255,255,255,0.92); }
+  .olive-hero-cta { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {
-  .olive-hero-heading { font-size: clamp(1.5rem, 7vw, 1.9rem); }
+  .olive-hero { min-height: 110vw; }
+  .olive-hero-heading { font-size: clamp(1.4rem, 7vw, 1.8rem); }
 }
 
 /* ===== PHOTO MOSAIC ===== */
