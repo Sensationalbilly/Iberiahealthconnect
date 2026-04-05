@@ -1541,45 +1541,44 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 /* ===== OLIVE TREE HERO ===== */
 .olive-hero {
   position: relative;
-  min-height: 92vh;
-  display: flex;
-  align-items: flex-end;
   overflow: hidden;
 }
 
 .olive-hero-bg {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 0;
+  line-height: 0;
 }
 
+/* Image shows 100% width — no cropping, full details visible */
 .olive-hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
+  height: auto;
   display: block;
 }
 
-/* Left-side gradient so text is always legible */
+/* Gradient overlay on top of the image */
 .olive-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     105deg,
     rgba(10, 20, 8, 0.72) 0%,
-    rgba(10, 20, 8, 0.55) 40%,
-    rgba(10, 20, 8, 0.10) 75%,
+    rgba(10, 20, 8, 0.50) 38%,
+    rgba(10, 20, 8, 0.10) 68%,
     transparent 100%
   );
 }
 
+/* Content floats over the image */
 .olive-hero-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  max-width: 600px;
-  padding: 0 2.5rem 5rem;
-  margin-left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 560px;
+  padding: 0 2.5rem;
+  left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
 }
 
 .olive-hero-heading {
@@ -1638,20 +1637,23 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .olive-hero { min-height: 85vh; align-items: flex-end; }
   .olive-hero-content {
-    padding: 0 1.25rem 3.5rem;
-    margin-left: 0;
+    position: relative;
+    top: auto;
+    transform: none;
+    left: auto;
+    padding: 2rem 1.25rem 2.5rem;
     max-width: 100%;
+    background: linear-gradient(to bottom, rgba(10,20,8,0.65), rgba(10,20,8,0.45));
+    margin-top: -4px;
   }
-  .olive-hero-heading { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .olive-hero-heading { font-size: clamp(1.8rem, 8vw, 2.4rem); }
   .olive-hero-card { max-width: 100%; }
   .olive-hero-cta { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {
-  .olive-hero { min-height: 80vh; }
-  .olive-hero-heading { font-size: clamp(1.8rem, 8.5vw, 2.4rem); }
+  .olive-hero-heading { font-size: clamp(1.6rem, 7.5vw, 2rem); }
 }
 
 /* ===== PHOTO MOSAIC ===== */
