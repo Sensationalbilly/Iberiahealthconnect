@@ -441,7 +441,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
 .footer { background: var(--foreground); color: rgba(255,255,255,0.8); padding: 4rem 0 0; }
 .footer-inner { display: grid; grid-template-columns: 1.5fr 2fr; gap: 4rem; padding-bottom: 3rem; }
 .footer-brand p { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 280px; }
-.footer-logo { height: 44px; filter: brightness(0) invert(1); opacity: 0.9; }
+.footer-logo { height: 56px; width: auto; object-fit: contain; opacity: 1; }
 .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
 .footer-col h5 { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 0.25rem; }
@@ -1550,14 +1550,12 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   line-height: 0;
 }
 
-/* Image shows 100% width — no cropping, full details visible */
 .olive-hero-img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Gradient overlay on top of the image */
 .olive-hero-overlay {
   position: absolute;
   inset: 0;
@@ -1570,7 +1568,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   );
 }
 
-/* Content floats over the image */
+/* Desktop: content floats over the image */
 .olive-hero-content {
   position: absolute;
   z-index: 2;
@@ -1579,6 +1577,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   max-width: 560px;
   padding: 0 2.5rem;
   left: max(2.5rem, calc((100vw - 1280px) / 2 + 2.5rem));
+  line-height: 1.6;
 }
 
 .olive-hero-heading {
@@ -1593,7 +1592,6 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   margin-bottom: 1.75rem;
 }
 
-/* Semi-transparent subtitle card */
 .olive-hero-card {
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(6px);
@@ -1610,7 +1608,6 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   margin: 0;
 }
 
-/* CTA button */
 .olive-hero-cta {
   display: inline-flex;
   align-items: center;
@@ -1627,6 +1624,7 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   cursor: pointer;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  line-height: 1;
 }
 
 .olive-hero-cta:hover {
@@ -1635,25 +1633,36 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font-serif); letter-spacing: -0.025em; li
   box-shadow: 0 10px 28px rgba(0,0,0,0.30);
 }
 
-/* ── Responsive ── */
+/* ── Mobile: image on top, content block below with dark bg ── */
 @media (max-width: 768px) {
+  .olive-hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .olive-hero-bg { flex-shrink: 0; }
+  .olive-hero-overlay {
+    background: linear-gradient(to bottom, rgba(10,20,8,0.15) 0%, rgba(10,20,8,0.50) 100%);
+  }
   .olive-hero-content {
     position: relative;
     top: auto;
     transform: none;
     left: auto;
-    padding: 2rem 1.25rem 2.5rem;
     max-width: 100%;
-    background: linear-gradient(to bottom, rgba(10,20,8,0.65), rgba(10,20,8,0.45));
-    margin-top: -4px;
+    padding: 1.75rem 1.25rem 2rem;
+    background: #0d1f0d;
+    line-height: 1.6;
   }
-  .olive-hero-heading { font-size: clamp(1.8rem, 8vw, 2.4rem); }
-  .olive-hero-card { max-width: 100%; }
-  .olive-hero-cta { width: 100%; justify-content: center; }
+  .olive-hero-heading {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+    margin-bottom: 1.25rem;
+  }
+  .olive-hero-card { max-width: 100%; margin-bottom: 1.5rem; }
+  .olive-hero-cta { width: 100%; justify-content: center; padding: 14px 24px; }
 }
 
 @media (max-width: 480px) {
-  .olive-hero-heading { font-size: clamp(1.6rem, 7.5vw, 2rem); }
+  .olive-hero-heading { font-size: clamp(1.5rem, 7vw, 1.9rem); }
 }
 
 /* ===== PHOTO MOSAIC ===== */
