@@ -7,10 +7,13 @@
   <title>Iberia Health Connect – Healthcare for Americans in Portugal & Spain</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.cdnfonts.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/nekst" rel="stylesheet">
-  <!-- Performance: preload critical assets -->
-  <link rel="preload" as="image" href="images/olive tree granada.webp" type="image/webp">
+  <!-- Preload hero for fast LCP on all screen sizes -->
+  <link rel="preload" as="image" href="images/olive tree granada-480w.webp" type="image/webp" media="(max-width:480px)">
+  <link rel="preload" as="image" href="images/olive tree granada-800w.webp" type="image/webp" media="(max-width:800px)">
+  <link rel="preload" as="image" href="images/olive tree granada.webp" type="image/webp" media="(min-width:801px)">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -84,7 +87,12 @@
 
     <!-- Image drives the section height — no cropping -->
     <div class="olive-hero-bg" aria-hidden="true">
-      <img src="images/olive tree granada.webp" alt="" class="olive-hero-img" />
+      <img src="images/olive tree granada.webp"
+           srcset="images/olive tree granada-480w.webp 480w,
+                   images/olive tree granada-800w.webp 800w,
+                   images/olive tree granada.webp 1400w"
+           sizes="100vw"
+           alt="" class="olive-hero-img" />
       <div class="olive-hero-overlay"></div>
     </div>
 
@@ -167,7 +175,12 @@
       </div>
       <div class="col reveal-left">
         <div class="img-card">
-          <img src="images/couple market portugal.webp" alt="Two people at a Lisbon market" class="rounded-img" loading="lazy" />
+          <img src="images/couple market portugal.webp"
+               srcset="images/couple market portugal-400w.webp 400w,
+                       images/couple market portugal-700w.webp 700w,
+                       images/couple market portugal.webp 1200w"
+               sizes="(max-width:768px) 100vw, 50vw"
+               alt="Two people at a Lisbon market" class="rounded-img" loading="lazy" />
           <div class="expert-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Expert-backed
@@ -187,7 +200,12 @@
   <!-- ═══ EXPERTISE BANNER ═══ -->
   <section class="expertise-banner">
     <div class="expertise-bg">
-      <img src="images/portugal trees.webp" alt="Portuguese landscape" class="expertise-img" loading="lazy" />
+      <img src="images/portugal trees.webp"
+           srcset="images/portugal trees-400w.webp 400w,
+                   images/portugal trees-700w.webp 700w,
+                   images/portugal trees.webp 1200w"
+           sizes="100vw"
+           alt="Portuguese landscape" class="expertise-img" loading="lazy" />
       <div class="expertise-overlay"></div>
     </div>
     <div class="container expertise-content">
@@ -305,7 +323,10 @@
           <p>Broad provider access and understanding public enrollment timelines.</p>
         </div>
         <div class="who-card reveal-up" style="animation-delay:.1s">
-          <img src="images/family portugal.webp" alt="Family in Portugal" class="who-card-img" loading="lazy" />
+          <img src="images/family portugal.webp"
+               srcset="images/family portugal-400w.webp 400w, images/family portugal.webp 700w"
+               sizes="(max-width:768px) 100vw, 50vw"
+               alt="Family in Portugal" class="who-card-img" loading="lazy" />
           <h4>Families with children</h4>
           <p>Establishing pediatric pathways and continuity of care documentation.</p>
         </div>
@@ -334,27 +355,45 @@
       </div>
       <div class="photo-mosaic">
         <div class="photo-tile photo-tile--tall reveal-up" style="animation-delay:.05s">
-          <img src="images/rainbow umbrellas portugal.webp" alt="Rainbow umbrellas in Portugal" loading="lazy" />
+          <img src="images/rainbow umbrellas portugal.webp"
+               srcset="images/rainbow umbrellas portugal-400w.webp 400w, images/rainbow umbrellas portugal-700w.webp 700w, images/rainbow umbrellas portugal.webp 1200w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Rainbow umbrellas in Portugal" loading="lazy" />
           <div class="photo-tile-label">Lisbon, Portugal</div>
         </div>
         <div class="photo-tile reveal-up" style="animation-delay:.1s">
-          <img src="images/portugal trams.webp" alt="Yellow trams in Lisbon" loading="lazy" />
+          <img src="images/portugal trams.webp"
+               srcset="images/portugal trams-400w.webp 400w, images/portugal trams-700w.webp 700w, images/portugal trams.webp 1200w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Yellow trams in Lisbon" loading="lazy" />
           <div class="photo-tile-label">Iconic Lisbon Trams</div>
         </div>
         <div class="photo-tile reveal-up" style="animation-delay:.15s">
-          <img src="images/Spain yellow alley.webp" alt="Yellow alley in Spain" loading="lazy" />
+          <img src="images/Spain yellow alley.webp"
+               srcset="images/Spain yellow alley-400w.webp 400w, images/Spain yellow alley-700w.webp 700w, images/Spain yellow alley.webp 1200w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Yellow alley in Spain" loading="lazy" />
           <div class="photo-tile-label">Andalusia, Spain</div>
         </div>
         <div class="photo-tile photo-tile--tall reveal-up" style="animation-delay:.2s">
-          <img src="images/portugal square.webp" alt="Praça do Comércio at golden hour" loading="lazy" />
+          <img src="images/portugal square.webp"
+               srcset="images/portugal square-480w.webp 480w, images/portugal square-800w.webp 800w, images/portugal square.webp 1400w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Praça do Comércio at golden hour" loading="lazy" />
           <div class="photo-tile-label">Praça do Comércio</div>
         </div>
         <div class="photo-tile reveal-up" style="animation-delay:.25s">
-          <img src="images/portugal trees.webp" alt="Portuguese landscape" loading="lazy" />
+          <img src="images/portugal trees.webp"
+               srcset="images/portugal trees-400w.webp 400w, images/portugal trees-700w.webp 700w, images/portugal trees.webp 1200w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Portuguese landscape" loading="lazy" />
           <div class="photo-tile-label">Portuguese Countryside</div>
         </div>
         <div class="photo-tile reveal-up" style="animation-delay:.3s">
-          <img src="images/spain dog walk.webp" alt="Barcelona Gothic Quarter" loading="lazy" />
+          <img src="images/spain dog walk.webp"
+               srcset="images/spain dog walk-500w.webp 500w, images/spain dog walk.webp 900w"
+               sizes="(max-width:640px) 100vw, 33vw"
+               alt="Barcelona Gothic Quarter" loading="lazy" />
           <div class="photo-tile-label">Barcelona, Spain</div>
         </div>
       </div>
@@ -371,42 +410,60 @@
       </div>
       <div class="community-grid">
         <div class="community-card reveal-up" style="animation-delay:.05s">
-          <img src="images/retired couple portugal.webp" alt="Retired couple enjoying Portugal" loading="lazy" />
+          <img src="images/retired couple portugal.webp"
+               srcset="images/retired couple portugal-400w.webp 400w, images/retired couple portugal.webp 700w"
+               sizes="(max-width:768px) 100vw, 50vw"
+               alt="Retired couple enjoying Portugal" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">Retirees</span>
             <p>Finding peace and quality care in Portugal's SNS system.</p>
           </div>
         </div>
         <div class="community-card reveal-up" style="animation-delay:.12s">
-          <img src="images/couple spain.webp" alt="LGBTQ+ couple in Spain" loading="lazy" />
+          <img src="images/couple spain.webp"
+               srcset="images/couple spain-500w.webp 500w, images/couple spain.webp 900w"
+               sizes="(max-width:768px) 100vw, 33vw"
+               alt="LGBTQ+ couple in Spain" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">LGBTQ+ Couples</span>
             <p>Navigating care continuity with confidence and support.</p>
           </div>
         </div>
         <div class="community-card reveal-up" style="animation-delay:.19s">
-          <img src="images/family at beach portugal.webp" alt="Family on a Portuguese beach" loading="lazy" />
+          <img src="images/family at beach portugal.webp"
+               srcset="images/family at beach portugal-400w.webp 400w, images/family at beach portugal.webp 700w"
+               sizes="(max-width:768px) 100vw, 50vw"
+               alt="Family on a Portuguese beach" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">Families</span>
             <p>Establishing pediatric pathways before the first day of school.</p>
           </div>
         </div>
         <div class="community-card reveal-up" style="animation-delay:.26s">
-          <img src="images/young people cafe portugal.webp" alt="Young people at a Lisbon café" loading="lazy" />
+          <img src="images/young people cafe portugal.webp"
+               srcset="images/young people cafe portugal-400w.webp 400w, images/young people cafe portugal.webp 700w"
+               sizes="(max-width:768px) 100vw, 33vw"
+               alt="Young people at a Lisbon café" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">Young Professionals</span>
             <p>Planning prescriptions and private care from day one.</p>
           </div>
         </div>
         <div class="community-card reveal-up" style="animation-delay:.33s">
-          <img src="images/student spain.webp" alt="Student in a Spanish plaza" loading="lazy" />
+          <img src="images/student spain.webp"
+               srcset="images/student spain-500w.webp 500w, images/student spain.webp 900w"
+               sizes="(max-width:768px) 100vw, 33vw"
+               alt="Student in a Spanish plaza" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">Individual Relocators</span>
             <p>Getting clarity on the system before the paperwork piles up.</p>
           </div>
         </div>
         <div class="community-card reveal-up" style="animation-delay:.4s">
-          <img src="images/young people portugal.webp" alt="Young people in Portugal" loading="lazy" />
+          <img src="images/young people portugal.webp"
+               srcset="images/young people portugal-400w.webp 400w, images/young people portugal.webp 700w"
+               sizes="(max-width:768px) 100vw, 33vw"
+               alt="Young people in Portugal" loading="lazy" />
           <div class="community-card-body">
             <span class="community-tag">Digital Nomads</span>
             <p>Understanding visa health requirements and private options.</p>
