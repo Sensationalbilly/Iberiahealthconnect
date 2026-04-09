@@ -1,0 +1,43 @@
+HOSTINGER UPLOAD CHECKLIST — Iberia Health Connect
+====================================================
+
+UPLOAD THESE FILES/FOLDERS to public_html:
+-------------------------------------------
+✅ index.html
+✅ about.html
+✅ contact.html
+✅ faq.html
+✅ resources.html
+✅ portugal-guide.html
+✅ spain-guide.html
+✅ portugal-vs-spain.html
+✅ privacy.html
+✅ terms.html
+✅ favicon.svg
+✅ .htaccess          ← IMPORTANT: enables caching + gzip
+✅ css/               ← folder (style.css inside)
+✅ js/                ← folder (main.js inside)
+✅ services/          ← folder (4 HTML files inside)
+✅ images/            ← folder (.webp files only — see note below)
+
+DO NOT UPLOAD:
+--------------
+❌ compress.py
+❌ desktop.ini
+❌ .git/ folder
+❌ hostinger-upload-checklist.txt (this file)
+❌ images/*.jpg  (original JPGs — only upload .webp versions)
+❌ images/*.png  (original PNGs — only upload .webp versions)
+❌ Background.png, doctor.png, Gemini_*.png (root level originals)
+
+IMAGES FOLDER — only upload .webp files:
+-----------------------------------------
+All images in the images/ folder ending in .webp are ready.
+The original .jpg and .png files are NOT needed on the server.
+
+AFTER UPLOADING:
+----------------
+1. Make sure index.html is directly inside public_html (not in a subfolder)
+2. Visit your domain — it should load immediately
+3. Test on mobile and desktop
+4. Check https:// works (Hostinger provides free SSL — enable it in hPanel)
